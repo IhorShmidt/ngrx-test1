@@ -1,0 +1,15 @@
+<div class="">
+  <h1>Welcome to ngrx Pizza</h1>
+
+  <div class="" *ngFor="let pizza of pizza$ | async">
+
+    <h3>Pizza ID: {{pizza.id}}</h3>
+    <p>Pizza size: {{pizza.size}}</p>
+
+    <button (click)="udpatePizza(pizza.id, 'big')">Update pizza</button>
+    <button (click)="deletePizza(pizza.id)">Delete pizza</button>
+  </div>
+
+
+  <button (click)="createPizza()">Create new Pizza</button>
+</div>
